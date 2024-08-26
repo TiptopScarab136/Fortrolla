@@ -1,0 +1,67 @@
+/* Basic Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+}
+
+/* Navigation Container */
+.nav-container {
+    position: relative;
+    z-index: 1000;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    position: fixed;
+    height: 4rem;
+    box-shadow: 1px 1px 10px black;
+}
+
+/* Navigation Panel (Initially Hidden) */
+.nav-panel {
+    align-items: center;
+    justify-content: center;
+    max-height: 0;
+    width: 4rem;
+    overflow: hidden;
+    flex-direction: column;
+    background-color: #ffffff;
+    transition: max-height 0.3s ease-out;
+    margin-top: 12.5vh;
+    position: fixed;
+    box-shadow: 1px 1px 10px black;
+    
+}
+
+/* Links inside the Navigation Panel */
+.nav-panel a {
+    color: rgb(0, 0, 0);
+    padding: 1rem;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.nav-panel a:hover {
+    background-color: #ffffff;
+}
+
+.nav-panel.active {
+    max-height: 100vh;
+}
+
+.home {
+    margin: 10%;
+    position: absolute
+}
